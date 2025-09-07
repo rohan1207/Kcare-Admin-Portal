@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ArrowLeft } from 'react-feather';
 
 const LoginPage = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -26,10 +27,14 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-stone-100">
+    <div className="relative flex items-center justify-center min-h-screen bg-stone-100">
+      <a href="https://kcare.onrender.com" className="absolute top-6 left-6 flex items-center text-sm font-medium text-stone-600 hover:text-teal-700 transition-colors">
+        <ArrowLeft className="w-5 h-5 mr-2" />
+        Back to Home
+      </a>
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
         <h1 className="text-3xl font-display text-center text-stone-800">
-          {isLogin ? 'Admin Portal Login' : 'Contact Admin/Doctor '}
+          {isLogin ? 'Doctor Portal Login' : 'Create Your Account'}
         </h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           {!isLogin && (
