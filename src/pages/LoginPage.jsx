@@ -29,7 +29,7 @@ const LoginPage = () => {
     <div className="flex items-center justify-center min-h-screen bg-stone-100">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
         <h1 className="text-3xl font-display text-center text-stone-800">
-          {isLogin ? 'Patient Portal Login' : 'Create Your Account'}
+          {isLogin ? 'Admin Portal Login' : 'Contact Admin/Doctor '}
         </h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           {!isLogin && (
